@@ -23,11 +23,9 @@ async function main() {
     await approveTx.wait();
 
     console.log('Approval confirmed');
-
-    // for (let i = 10; i < tokenIds; i++) {
+    
     const depositTx = await fxContract.deposit(tokenAddress, walletAddress, 5, "0x6556");
     await depositTx.wait(); 
-    // }
 
     console.log("Tokens deposited");
   
